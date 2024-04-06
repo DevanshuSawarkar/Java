@@ -607,3 +607,10 @@ Q. Create a project of classroom as main containing two object of projectors, hu
         }
     }
     ```
+# Wrapper Classes in Java
+- A Wrapper class in Java is a class whose object wraps or contains primitive data types. When we create an object to a wrapper class, it contains a field and in this field, we can store primitive data types. In other words, we can wrap a primitive value into a wrapper class object.
+- They convert primitive data types into objects. Objects are needed if we wish to modify the arguments passed into a method (because primitive types are passed by value).
+- The classes in java.util package handles only objects and hence wrapper classes help in this case also.
+- An object is needed to support synchronization in multithreading.
+- Collections allowed only object data.
+- Wrapper classes in Java are Byte, Integer, Short, Long, Float, Double, Character, Boolean.
