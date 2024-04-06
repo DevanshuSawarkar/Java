@@ -614,3 +614,19 @@ Q. Create a project of classroom as main containing two object of projectors, hu
 - An object is needed to support synchronization in multithreading.
 - Collections allowed only object data.
 - Wrapper classes in Java are Byte, Integer, Short, Long, Float, Double, Character, Boolean.
+- Example:
+    ```java
+    public class WrapperExample1 {
+        public static void main(String[] args) {
+            int a = 10;
+            // converting the value from int to object
+            // Integer obja = new Integer(a); -> Old School
+            // Auto Boxing
+            Integer obja = a;
+            // converting the value from object to int
+            // Auto Un-Boxing
+            int a1 = obja;
+            System.out.println(a1);
+        }
+    }
+    ```
