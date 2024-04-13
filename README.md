@@ -630,3 +630,60 @@ Q. Create a project of classroom as main containing two object of projectors, hu
         }
     }
     ```
+# Multi-Threading in Java
+- A program under execution is called a process.
+- Multithreading in Java is a process of executing multiple threads simultaneously.
+- A thread is a lightweight sub-process, the smallest unit of processing. Multiprocessing and multithreading, both are used to achieve multitasking.
+- However,we use multithreading than multiprocessing because threads use a shared memory area. They don't allocate separate memory area so saves memory, and context-switching between the threads takes less time than process.
+- Java Multithreading is mostly used in games.
+- Threads can be implemented by two ways:
+    - By implementing runnable interface (best way)
+    - By extending thread class
+- Example:
+    ```java
+    public class ThreadExample1 {
+        public static void main(String[] args) {
+            Thread t = Thread.currentThread();
+            System.out.println(t); // -> Thread[name, priority, group]
+        }
+    }
+    ```
+- Example:
+    ```java
+    public class MyThread {
+        public static void main(String[] args) {
+            ChildThread t1 = new ChildThread("Child Thread");
+            for(int i = 0; i < 5; i++) {
+                System.out.println("Main Thread: " + i);
+                try {
+                    Thread.sleep(1000);
+                }
+                catch (Exception e) {
+                    System.err.println("Exception: " + e);
+                }
+            }
+        }
+    }
+    ```
+- Example:
+    ```java
+    public class ChildThread implements Runnable {
+        private Thread t;
+        public ChildThread(String name) {
+            t = new Thread(this, name);
+            t.start();
+        }
+        @Override
+        public void run() {
+            for(int i = 0; i < 5; i++) {
+                System.out.println("Child Thread: " + i);
+                try {
+                    Thread.sleep(1000);
+                }
+                catch(Exception e) {
+                    System.out.println("Exception: " + e);
+                }
+            }
+        }
+    }
+    ```
