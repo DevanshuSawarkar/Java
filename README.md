@@ -687,3 +687,26 @@ Q. Create a project of classroom as main containing two object of projectors, hu
         }
     }
     ```
+# Database
+- Oracle is the leader of databases in the market, because of it's security and low table algorithm.
+- Download [MySQL Installer](https://dev.mysql.com/downloads/installer/).
+- Select your operating system and select the second available link on the website.
+- Run the installer. Make sure you have internet access, select custom->select server and workbench till you reach the end of the folder, select the files and click on the green arrow->click execute->click next/finish->click next/finish/execute till you reach the end and your system opens a program.
+- Close the program and search for MySQL Command Line Client in start menu and run it.
+- Type `show databases;`, it displays databases in the system.
+- Type `create database database_name` to create a database.
+- Type `use database_name` to change the database.
+- Type `show tables;` to see the tables.
+- Type 
+    ```
+    create table table_name
+        -> (
+        -> int_data_var int,
+        -> text_data_var text,
+        -> text_data_var text
+        -> );
+    ```
+    to create a table with required columns.
+- Type `desc table_name;` to see the table.
+- Type `select * from table_name;` to fetch/show data from the table.
+- Type `insert into table_name values (100, 'AAA', 'CSE');` to insert  data into the table, type `select * from table_name;` to fetch data from the table.
