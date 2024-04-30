@@ -710,3 +710,72 @@ Q. Create a project of classroom as main containing two object of projectors, hu
 - Type `desc table_name;` to see the table.
 - Type `select * from table_name;` to fetch/show data from the table.
 - Type `insert into table_name values (100, 'AAA', 'CSE');` to insert  data into the table, type `select * from table_name;` to fetch data from the table.
+---
+- AWT Example:-
+    ```java
+    import java.awt.*;
+    public class AWTExample1 extends Frame{
+        AWTExample1() {
+            Button b1 = new Button("Click Me!!");
+            Button b2 = new Button("Click Me!!");
+            Button b3 = new Button("Click Me!!");
+            b1.setBounds(50,100,80,30);
+            add(b1);
+            b2.setBounds(50,200,80,30);
+            add(b2);
+            b3.setBounds(150,100,80,30);
+            add(b3);
+            setSize(300,300);
+            setTitle("This is our basic AWT example");
+            setLayout(null);
+            setVisible(true);
+        }
+        public static void main(String[] args) {
+            AWTExample1 f = new AWTExample1();
+        }
+    }
+    ```
+- Swing Example:-
+    ```java
+    import javax.swing.JButton;
+    import javax.swing.JFrame;
+    import javax.swing.JLabel;
+    import javax.swing.JTextField;
+
+    public class SwingExample {
+        JTextField txt_rollno,txt_name,txt_branch;
+        JButton btn_save;
+        JLabel lbl_name,lbl_rollno,lbl_branch;
+        public SwingExample() {
+            JFrame f = new JFrame();
+            lbl_rollno = new JLabel("Roll no.: ");
+            lbl_rollno.setBounds(50,50,100,50);
+            txt_rollno = new JTextField();
+            txt_rollno.setBounds(120,70,100,20);
+            
+            f.add(lbl_rollno);
+            f.add(txt_rollno);
+            
+            lbl_name = new JLabel("Name: ");
+            lbl_name.setBounds(50,80,100,50);
+            txt_name = new JTextField();
+            txt_name.setBounds(120,100,100,20);
+            
+            f.add(lbl_name);
+            f.add(txt_name);
+            
+            btn_save = new JButton("Save");
+            btn_save.setBounds(120,130,80,20);
+            f.add(btn_save);
+            
+            f.setSize(300,300);
+            f.setLayout(null);
+            f.setVisible(true);
+        }
+        public static void main(String[] args) {
+            new SwingExample();
+        }
+    }
+    ```
+---
+## Java Database Connectivity (JDBC)
