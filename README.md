@@ -779,3 +779,25 @@ Q. Create a project of classroom as main containing two object of projectors, hu
     ```
 ---
 ## Java Database Connectivity (JDBC)
+- You may need to download [drivers](https://dev.mysql.com/downloads/connector/j/) for MySQL database connectivity.
+- Example:
+    ```java
+    import java.sql.Connection;
+    import java.sql.DriverManager;
+    import java.sql.PreparedStatement;
+    public class DatabaseConnectivity {
+        public static void main(String[] args) {
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+                System.out.println("Drivers Registered...");
+                Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/studentdb"/*database name*/,"root"/*user name*/,"root"/*password*/);
+                System.out.println("Connecction Established...");
+                String sql = "insert into tbl_student values(200,'ZZZ','CSE')";
+                PreparedStatement statement = conn.prepareStatement(sql);
+                statement.execute();
+            } catch(Exception e) {
+                System.out.println("Exception = "+e);
+            }
+        }
+    }
+    ```
